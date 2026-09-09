@@ -146,6 +146,14 @@ address {
   outline-offset: 3px;
 }
 
+body.is-scroll-locked {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+
 /* --- Concept Banner --- */
 .concept-banner {
   background: var(--color-wine);
@@ -489,9 +497,9 @@ address {
   inset: 0;
   background: linear-gradient(
     to top,
-    var(--color-overlay-heavy) 0%,
-    var(--color-overlay) 45%,
-    rgba(28, 26, 24, 0.3) 100%
+    rgba(28, 26, 24, 0.78) 0%,
+    rgba(28, 26, 24, 0.48) 42%,
+    rgba(28, 26, 24, 0.28) 100%
   );
 }
 
@@ -665,7 +673,7 @@ address {
   flex-shrink: 0;
   padding: var(--space-sm) var(--space-md);
   font-size: var(--text-sm);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-muted);
   border-bottom: 1px solid transparent;
@@ -682,6 +690,11 @@ address {
 
 .menu-tab:hover {
   color: var(--color-ivory);
+}
+
+.menu-tab:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
 }
 
 .menu-list {
@@ -981,6 +994,12 @@ address {
 .contact-card:active {
   transform: scale(0.99);
   background: rgba(247, 243, 237, 0.07);
+}
+
+.contact-card:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 3px;
+  border-color: rgba(247, 243, 237, 0.35);
 }
 
 .contact-card-label {

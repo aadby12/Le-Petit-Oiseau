@@ -1,0 +1,28 @@
+{
+  "name": "le-petit-oiseau-concept",
+  "version": "1.0.0",
+  "description": "Premium website concept for Le Petit Oiseau — Afro-Fusion × French restaurant, Accra",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "node scripts/build-config.js",
+    "start": "node server.js",
+    "dev": "node scripts/build-config.js && node server.js",
+    "build": "node scripts/build-config.js",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  },
+  "keywords": [
+    "restaurant",
+    "accra",
+    "concept",
+    "le-petit-oiseau"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
